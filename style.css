@@ -1,0 +1,92 @@
+@import "wp-theme-infos.css";
+@font-face {
+  font-family: "paperkind";
+  src: url("assets/fonts/paperkind/paperkind.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Righteous";
+  src: url("assets/fonts/righteous/righteous.woff2") format("woff2");
+}
+@font-face {
+  font-family: "varelaround";
+  src: url("assets/fonts/varelaround/varelaround.woff2") format("woff2");
+}
+.container-header {
+  padding: 1rem 3rem;
+}
+
+.home .header {
+  min-height: 30rem;
+  height: 75vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.home .header__video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.home .header__overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: relative;
+}
+.home .header__overlay_container {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Righteous";
+}
+.home .header__overlay_container_title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: 10rem;
+}
+.home .header__overlay_container_description {
+  font-size: 1.5rem;
+}
+
+.admin-bar .nav {
+  top: 32px;
+}
+
+.navigation {
+  backdrop-filter: blur(10px);
+  width: 100%;
+  z-index: 99;
+  position: fixed;
+}
+.navigation .nav {
+  font-family: "varelaround";
+  font-size: 1rem;
+  top: 0;
+  left: 0;
+  background-color: rbga(rgb(255, 255, 255), 0.1);
+}
+.navigation .nav__ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .nav__ul .menu-item {
+  display: flex;
+}
+.navigation .nav__ul .menu-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  padding-bottom: 0.25rem;
+}
+.navigation .nav__ul .menu-item a:hover {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+/*# sourceMappingURL=style.css.map */

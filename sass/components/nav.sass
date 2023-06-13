@@ -1,0 +1,28 @@
+.admin-bar
+    .nav
+        top: 32px
+
+.navigation
+    backdrop-filter: blur(10px)
+    width: 100%
+    z-index: 99
+    position: fixed
+    .nav
+        font-family: 'varelaround'
+        font-size: 1rem
+        top: 0
+        left: 0
+        background-color: rbga($white, .1)
+        &__ul
+            display: flex
+            justify-content: space-between
+            .menu-item
+                display: flex
+                a
+                    text-decoration: none
+                    text-transform: uppercase
+                    color: $white
+                    padding-bottom: 0.25rem
+                    
+                a:hover
+                    border-bottom: 2px solid $white
