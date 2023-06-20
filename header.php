@@ -18,7 +18,7 @@
 <body <?php body_class('body'); ?>>
 
 <div class="navigation">
-  <div class="container-header">
+  <div class="nav_container">
     <?php wp_nav_menu(
       array(
         'theme_location' => 'main-menu',
