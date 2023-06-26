@@ -25,7 +25,7 @@
             <div class="products__cards_one">
                 <h3><?php the_sub_field('title'); ?></h3>
                 <p><?php the_sub_field('description'); ?></p>
-                <div>
+                <div class="products__cards_one_img">
                     <img src="<?php echo wp_get_attachment_image_src(get_sub_field('image'), 'cards')[0];?>" alt="">
                 </div>
             </div>

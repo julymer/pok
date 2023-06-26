@@ -27,7 +27,7 @@
 
 .section {
   font-family: "varelaround";
-  margin-bottom: 5rem;
+  margin: 7rem 0;
 }
 .section__title {
   padding: 2rem;
@@ -40,7 +40,7 @@
 
 .home .header {
   min-height: 30rem;
-  height: 75vh;
+  height: 95vh;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -72,7 +72,7 @@
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: bold;
-  padding-top: 10rem;
+  padding-top: 15rem;
 }
 .home .header__overlay_container_description {
   font-size: 1.5rem;
@@ -84,13 +84,24 @@
 }
 .home .products__cards_one {
   padding: 1rem 1rem 0.5rem;
-  border: 2px solid #d1d1d1;
   border-radius: 10px;
   text-align: center;
   z-index: 0;
+  box-shadow: 0px 0px 10px 1px #6D963A;
 }
-.home .products__cards_one p {
-  padding: 0.5rem 0;
+.home .products__cards_one_img {
+  padding-top: 0.75rem;
+}
+.home .products__cards_one_img img {
+  transition: all 0.2s ease-in-out;
+}
+.home .products__cards_one_img img:hover {
+  scale: 115%;
+  transform: translateY(10%);
+}
+.home .products__cards_one:hover {
+  border: 2px solid #6D963A;
+  scale: 105%;
 }
 .home .histoire {
   background-color: #6D963A;
@@ -104,18 +115,22 @@
 }
 
 .navigation {
-  backdrop-filter: blur(10px);
-  width: 100%;
+  width: 80%;
   z-index: 99;
   position: fixed;
   padding: 1rem 0;
+  background-color: rgb(255, 255, 255);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #6D963A;
 }
 .navigation .nav {
   font-family: "varelaround";
   font-size: 1rem;
   top: 0;
   left: 0;
-  background-color: rbga(rgb(255, 255, 255), 0.1);
 }
 .navigation .nav__ul {
   display: flex;
@@ -123,15 +138,15 @@
 }
 .navigation .nav__ul .menu-item {
   display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .navigation .nav__ul .menu-item a {
   text-decoration: none;
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  padding-bottom: 0.25rem;
+  color: black;
 }
-.navigation .nav__ul .menu-item a:hover {
-  border-bottom: 2px solid rgb(255, 255, 255);
+.navigation .nav__ul .menu-item:hover {
+  scale: 110%;
 }
 
 /*# sourceMappingURL=style.css.map */

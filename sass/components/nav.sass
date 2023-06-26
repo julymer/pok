@@ -3,27 +3,31 @@
         top: 32px
 
 .navigation
-    backdrop-filter: blur(10px)
-    width: 100%
+    width: 80%
     z-index: 99
     position: fixed
     padding: 1rem 0
+    background-color: $white
+    left: 50% // +
+    transform: translateX(-50%) // +
+    margin-top: 1rem
+    border-radius: 10px
+    box-shadow: 0px 0px 10px 2px $green
     .nav
         font-family: 'varelaround'
         font-size: 1rem
         top: 0
         left: 0
-        background-color: rbga($white, .1)
         &__ul
             display: flex
             justify-content: space-between
             .menu-item
                 display: flex
+                text-transform: uppercase
+                font-weight: bold
                 a
                     text-decoration: none
-                    text-transform: uppercase
-                    color: $white
-                    padding-bottom: 0.25rem
-                    
-                a:hover
-                    border-bottom: 2px solid $white
+                    color: black 
+            .menu-item:hover
+                scale: 110%
+                
