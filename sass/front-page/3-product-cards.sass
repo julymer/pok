@@ -1,0 +1,36 @@
+.products
+    color: $blue
+    &__cards
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 2rem
+        margin: 0 30px
+        &_one
+            width: 260px
+            padding: 1rem 1rem 0.5rem
+            border: 3px solid $blue
+            border-radius: 10px
+            text-align: center
+            z-index: 0
+            transition: all 0.1s ease-in-out
+            &_img
+                padding-top: 0.75rem
+                img
+                    display: block
+                    width: auto
+                    max-height: 200px
+                    margin: 0 auto
+            &_texte
+                max-width: 100%
+        &_one:hover
+            scale: 105%
+            color: $white
+            background-color: $blue
+
+
+
+        
+            
+
+        
+            

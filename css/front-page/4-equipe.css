@@ -1,0 +1,20 @@
+.equipe__cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.equipe__cards_one {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  border: 1px solid green;
+  align-items: center;
+  justify-content: space-around;
+}
+.equipe__cards_one_img img {
+  display: block;
+  width: auto;
+  max-height: 200px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=4-equipe.css.map */

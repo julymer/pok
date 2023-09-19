@@ -1,0 +1,26 @@
+.nav_container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.main_container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.section {
+  font-family: "varelaround";
+  margin: 7rem 0;
+}
+.section__title {
+  padding: 2rem;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.section__title.no_padding {
+  padding: 0;
+}

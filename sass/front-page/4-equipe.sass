@@ -1,0 +1,49 @@
+.equipe
+    position: relative
+    background-color: $blue
+    h2
+        margin-top: 1.5rem
+        color: $white
+    &__paragraphe
+        text-align: justify
+        color: $white
+        width: 60%
+        margin: 0 auto 1.5rem
+
+    .custom-shape-divider-top-1694441383
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        overflow: hidden
+        line-height: 0
+        transform: rotate(180deg)
+        svg 
+            position: relative
+            display: block
+            width: calc(100% + 1.3px)
+            height: 55px
+        .shape-fill 
+            fill: #FFFFFF
+    &__cards
+        &_one 
+            display: flex
+            align-items: center
+            justify-content: space-around
+            &_img
+                img
+                    display: block
+                    width: auto
+                    max-height: 200px
+                    margin: 0 auto
+        .swiper
+            background-color: $white
+            color: $blue
+            width: 60%
+            padding: 1.5rem
+            border-radius: 10px
+            .swiper-pagination
+                .swiper-pagination-bullet-active
+                    background: $blue
+            .swiper-button-prev, .swiper-button-next
+                color: $blue

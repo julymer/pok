@@ -3,18 +3,18 @@
         top: 32px
 
 .navigation
-    width: 80%
+    width: 1200px
     z-index: 99
     position: fixed
-    padding: 1rem 0
-    background-color: $white
+    padding: 1.25rem 0
+    background-color: $othergreen
     left: 50% // +
     transform: translateX(-50%) // +
-    margin-top: 1rem
+    margin: 1rem 0
     border-radius: 10px
-    box-shadow: 0px 0px 10px 2px $green
+    box-shadow: 0px 0px 5px 2px $blue
     .nav
-        font-family: 'varelaround'
+        font-family: 'Righteous'
         font-size: 1rem
         top: 0
         left: 0
@@ -25,9 +25,16 @@
                 display: flex
                 text-transform: uppercase
                 font-weight: bold
+                transition: all 0.1s ease-in-out
                 a
                     text-decoration: none
                     color: black 
             .menu-item:hover
                 scale: 110%
-                
+
+.body
+    .mobmenu-content
+    li
+        a
+            font-family: 'Righteous'
+            color: $blue

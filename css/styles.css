@@ -1,0 +1,199 @@
+@import "wp-theme-infos.css";
+@font-face {
+  font-family: "paperkind";
+  src: url("assets/fonts/paperkind/paperkind.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Righteous";
+  src: url("assets/fonts/righteous/righteous.woff2") format("woff2");
+}
+@font-face {
+  font-family: "varelaround";
+  src: url("assets/fonts/varelaround/varelaround.woff2") format("woff2");
+}
+.nav_container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.main_container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.section {
+  font-family: "varelaround";
+  margin: 7rem 0;
+}
+.section__title {
+  padding: 2rem;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.section__title.no_padding {
+  padding: 0;
+}
+
+.home .header {
+  min-height: 30rem;
+  height: 95vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.home .header__video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.home .header__overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: relative;
+}
+.home .header__overlay_container {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Righteous";
+}
+.home .header__overlay_container_title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-top: 15rem;
+}
+.home .header__overlay_container_description {
+  font-size: 1.5rem;
+}
+.home .products__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.home .products__cards_one {
+  padding: 1rem 1rem 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 0;
+  box-shadow: 0px 0px 10px 1px #3e45d0;
+}
+.home .products__cards_one_img {
+  padding-top: 0.75rem;
+}
+.home .products__cards_one_img img {
+  transition: all 0.2s ease-in-out;
+  display: block;
+  width: auto;
+  max-height: 200px;
+  margin: 0 auto;
+}
+.home .products__cards_one:hover {
+  border: 2px solid #3e45d0;
+  scale: 105%;
+}
+.home .histoire {
+  background-color: #3e45d0;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.home .histoire .section__title {
+  text-align: center;
+}
+.home .histoire__content {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  padding-bottom: 50px;
+}
+.home .histoire__content_img {
+  width: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 50px;
+  border-radius: 6px;
+}
+.home .histoire__content_img p {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 60px 20px;
+  text-align: justify;
+  border-radius: 6px;
+  background-color: rgba(42, 42, 42, 0.5);
+}
+.home .histoire__content:nth-child(odd) {
+  display: flex;
+  justify-content: end;
+}
+.home .equipe__cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.home .equipe__cards_one {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  border: 1px solid green;
+  align-items: center;
+  justify-content: space-around;
+}
+.home .equipe__cards_one_img img {
+  display: block;
+  width: auto;
+  max-height: 200px;
+  margin: 0 auto;
+}
+
+.admin-bar .nav {
+  top: 32px;
+}
+
+.navigation {
+  width: 80%;
+  z-index: 99;
+  position: fixed;
+  padding: 1rem 0;
+  background-color: rgb(255, 255, 255);
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px #3e45d0;
+}
+.navigation .nav {
+  font-family: "varelaround";
+  font-size: 1rem;
+  top: 0;
+  left: 0;
+}
+.navigation .nav__ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .nav__ul .menu-item {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.navigation .nav__ul .menu-item a {
+  text-decoration: none;
+  color: black;
+}
+.navigation .nav__ul .menu-item:hover {
+  scale: 110%;
+}
+
+/*# sourceMappingURL=styles.css.map */

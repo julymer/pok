@@ -11,33 +11,82 @@
   font-family: "varelaround";
   src: url("assets/fonts/varelaround/varelaround.woff2") format("woff2");
 }
-.nav_container {
+.home {
+  position: relative;
+}
+.home .nav_container {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1rem;
 }
-
-.main_container {
+.home .main_container {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1rem;
 }
-
-.section {
-  font-family: "varelaround";
-  margin: 7rem 0;
+.home .section {
+  padding: 2.75rem 0;
 }
-.section__title {
+.home .section__title {
+  font-family: "paperkind";
   padding: 2rem;
   font-size: 2rem;
-  padding-bottom: 2rem;
 }
-.section__title.no_padding {
+.home .section h3, .home .section p {
+  font-family: "Righteous";
+}
+.home .section h3.no_padding, .home .section p.no_padding {
   padding: 0;
 }
 
+@media only screen and (max-width: 992px) {
+  .home h2 {
+    text-align: center;
+  }
+  .home .cidrerie__content {
+    flex-direction: column;
+  }
+  .home .cidrerie__content_img {
+    max-width: 70% !important;
+  }
+  .home .cidrerie__content_picto {
+    display: none !important;
+  }
+  .home .cidrerie .btn_video {
+    margin: 0 auto 1rem;
+    width: 40%;
+  }
+  .home .cidrerie .btn_video .popup-video {
+    padding: 1rem 1.5rem !important;
+  }
+  .home .navigation {
+    visibility: hidden;
+  }
+  .home .products__cards {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .home .products__cards_one_texte {
+    font-size: 2rem;
+  }
+  .home .products__cards_one_texte p {
+    overflow-wrap: break-word;
+  }
+  .home .nav_container {
+    max-width: 900px !important;
+  }
+  .home .main_container {
+    max-width: 900px !important;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .navigation {
+    width: 990px !important;
+  }
+}
 .home .header {
   min-height: 30rem;
   height: 95vh;
@@ -77,57 +126,250 @@
 .home .header__overlay_container_description {
   font-size: 1.5rem;
 }
+.home .cidrerie {
+  position: relative;
+  background-color: #aaffc7;
+}
+.home .cidrerie .section__title {
+  text-align: center;
+  color: #232855;
+}
+.home .cidrerie__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+.home .cidrerie__content_picto {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  max-width: 40%;
+}
+.home .cidrerie__content_picto img {
+  transform: scale(70%);
+}
+.home .cidrerie__content_img {
+  max-width: 40%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+.home .cidrerie__content_img p {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 60px 20px;
+  text-align: justify;
+  border-radius: 6px;
+  background-color: rgba(42, 42, 42, 0.5);
+  color: rgb(255, 255, 255);
+}
+.home .cidrerie .custom-shape-divider-bottom-1694504049 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.home .cidrerie .custom-shape-divider-bottom-1694504049 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 76px;
+}
+.home .cidrerie .custom-shape-divider-bottom-1694504049 .shape-fill {
+  fill: #FFFFFF;
+}
+.home .cidrerie .btn_video {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.home .cidrerie .btn_video .popup-video {
+  border: 3px solid #232855;
+  border-radius: 10px;
+  font-family: "Paperkind";
+  padding: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  transition: 1s background-position ease-in-out;
+  color: #232855;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/btn-pommes-1-300x152.jpg") no-repeat top;
+  background-size: cover;
+}
+.home .cidrerie .btn_video .popup-video:hover {
+  transform: scale(105%);
+  background-position: bottom;
+}
+.home .products {
+  color: #232855;
+}
 .home .products__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  margin: 0 30px;
 }
 .home .products__cards_one {
+  width: 260px;
   padding: 1rem 1rem 0.5rem;
+  border: 3px solid #232855;
   border-radius: 10px;
   text-align: center;
   z-index: 0;
-  box-shadow: 0px 0px 10px 1px #6D963A;
+  transition: all 0.1s ease-in-out;
 }
 .home .products__cards_one_img {
   padding-top: 0.75rem;
 }
 .home .products__cards_one_img img {
-  transition: all 0.2s ease-in-out;
+  display: block;
+  width: auto;
+  max-height: 200px;
+  margin: 0 auto;
 }
-.home .products__cards_one_img img:hover {
-  scale: 115%;
-  transform: translateY(10%);
+.home .products__cards_one_texte {
+  max-width: 100%;
 }
 .home .products__cards_one:hover {
-  border: 2px solid #6D963A;
   scale: 105%;
+  color: rgb(255, 255, 255);
+  background-color: #232855;
 }
-.home .histoire {
-  background-color: #6D963A;
+.home .equipe {
+  position: relative;
+  background-color: #232855;
+}
+.home .equipe h2 {
+  margin-top: 1.5rem;
   color: rgb(255, 255, 255);
 }
-.home .histoire__text {
-  position: relative;
+.home .equipe__paragraphe {
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  width: 60%;
+  margin: 0 auto 1.5rem;
 }
+.home .equipe .custom-shape-divider-top-1694441383 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.home .equipe .custom-shape-divider-top-1694441383 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 55px;
+}
+.home .equipe .custom-shape-divider-top-1694441383 .shape-fill {
+  fill: #FFFFFF;
+}
+.home .equipe__cards_one {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.home .equipe__cards_one_img img {
+  display: block;
+  width: auto;
+  max-height: 200px;
+  margin: 0 auto;
+}
+.home .equipe__cards .swiper {
+  background-color: rgb(255, 255, 255);
+  color: #232855;
+  width: 60%;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+.home .equipe__cards .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #232855;
+}
+.home .equipe__cards .swiper .swiper-button-prev, .home .equipe__cards .swiper .swiper-button-next {
+  color: #232855;
+}
+.home .contact {
+  background-color: #aaffc7;
+}
+.home .contact__content {
+  font-family: "Righteous";
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.home .contact__content_coordonnees {
+  text-align: center;
+}
+.home .contact__content_form {
+  background-color: #232855;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 60%;
+  margin: 2rem auto 0;
+  padding: 2rem;
+}
+.home .contact__content_form form .form-name {
+  display: flex;
+}
+.home .contact__content_form form .form-name .form-name1, .home .contact__content_form form .form-name .form-name2 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+.home .contact__content_form form .form-mail, .home .contact__content_form form .form-msg {
+  display: flex;
+  flex-direction: column;
+}
+.home .contact__content_form form input {
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+.home .contact__content_form form input[type=submit] {
+  margin: 1rem auto 0;
+  background-color: rgb(255, 255, 255);
+  color: #232855;
+  font-family: "Righteous";
+  text-transform: uppercase;
+}
+.home .contact__content_form form label {
+  padding: 1rem 0;
+}
+.home .contact__content_form form #message {
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+.home .footer {
+  font-family: "Righteous";
+  background-color: #232855;
+  color: rgb(255, 255, 255);
+}
+
 .admin-bar .nav {
   top: 32px;
 }
 
 .navigation {
-  width: 80%;
+  width: 1200px;
   z-index: 99;
   position: fixed;
-  padding: 1rem 0;
-  background-color: rgb(255, 255, 255);
+  padding: 1.25rem 0;
+  background-color: #aaffc7;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 1rem;
+  margin: 1rem 0;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 2px #6D963A;
+  box-shadow: 0px 0px 5px 2px #232855;
 }
 .navigation .nav {
-  font-family: "varelaround";
+  font-family: "Righteous";
   font-size: 1rem;
   top: 0;
   left: 0;
@@ -140,6 +382,7 @@
   display: flex;
   text-transform: uppercase;
   font-weight: bold;
+  transition: all 0.1s ease-in-out;
 }
 .navigation .nav__ul .menu-item a {
   text-decoration: none;
@@ -147,6 +390,11 @@
 }
 .navigation .nav__ul .menu-item:hover {
   scale: 110%;
+}
+
+.body li a {
+  font-family: "Righteous";
+  color: #232855;
 }
 
 /*# sourceMappingURL=style.css.map */

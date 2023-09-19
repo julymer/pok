@@ -3,22 +3,21 @@
     "version": "1.1.0",
     "description": "",
     "scripts": {
-      "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
-      "build-autoprefix": "postcss --use autoprefixer --map false --output style.css style.css",
-      "build-cleancss": "cleancss -o style.css style.css",
-      "build-clean": "rimraf css",
-      "build-sass": "sass sass/styles.sass style.css",
-      "deploy": "npm run build",
-      "watch": "npm run build-sass -- --watch"
+        "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+        "build-autoprefix": "postcss --use autoprefixer --map false --output style.css style.css",
+        "build-cleancss": "cleancss -o style.css style.css",
+        "build-clean": "rimraf css",
+        "build-sass": "sass sass/styles.sass style.css",
+        "deploy": "npm run build",
+        "watch": "npm run build-sass -- --watch"
     },
     "author": "https://github.com/melvinlemoine",
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "clean-css-cli": "^5.5.0",
-    "postcss-cli": "^9.1.0",
-    "rimraf": "^3.0.2",
-    "sass": "^1.56.1",
-    "postcss": "^8.4.19"
-  },
-  "description": ""
+    "devDependencies": {
+        "autoprefixer": "^10.4.13",
+        "clean-css-cli": "^5.5.0",
+        "postcss": "^8.4.19",
+        "postcss-cli": "^9.1.0",
+        "rimraf": "^3.0.2",
+        "sass": "^1.56.1"
+    }
 }
