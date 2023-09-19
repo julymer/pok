@@ -108,7 +108,7 @@
                 <?php while (the_repeater_field('home__equipe_cards')) : ?>
             
                         <div class="equipe__cards_one slider-single swiper-slide">
-                            <div>
+                            <div class="equipe__cards_one_texte">
                                 <h3><?php the_sub_field('name'); ?></h3>
                                 <p><?php the_sub_field('description'); ?></p>
                             </div>

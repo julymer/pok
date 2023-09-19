@@ -41,29 +41,7 @@
   padding: 0;
 }
 
-@media only screen and (max-width: 992px) {
-  .home h2 {
-    text-align: center;
-  }
-  .home .cidrerie__content {
-    flex-direction: column;
-  }
-  .home .cidrerie__content_img {
-    max-width: 70% !important;
-  }
-  .home .cidrerie__content_picto {
-    display: none !important;
-  }
-  .home .cidrerie .btn_video {
-    margin: 0 auto 1rem;
-    width: 40%;
-  }
-  .home .cidrerie .btn_video .popup-video {
-    padding: 1rem 1.5rem !important;
-  }
-  .home .navigation {
-    visibility: hidden;
-  }
+@media only screen and (max-width: 768px) {
   .home .products__cards {
     display: flex !important;
     flex-direction: column !important;
@@ -75,11 +53,56 @@
   .home .products__cards_one_texte p {
     overflow-wrap: break-word;
   }
-  .home .nav_container {
+}
+@media only screen and (max-width: 992px) {
+  h2 {
+    text-align: center;
+  }
+  .cidrerie__content {
+    flex-direction: column;
+  }
+  .cidrerie__content_img {
+    max-width: 70% !important;
+  }
+  .cidrerie__content_picto {
+    display: none !important;
+  }
+  .cidrerie .btn_video {
+    margin: 0 auto 1rem;
+    width: 40%;
+  }
+  .cidrerie .btn_video .popup-video {
+    padding: 1rem 1.5rem !important;
+  }
+  .navigation {
+    visibility: hidden;
+  }
+  .products__cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .products__cards_one {
+    margin: 0 auto;
+  }
+  .products__cards_one_texte {
+    font-size: 2rem;
+  }
+  .products__cards_one_texte p {
+    overflow-wrap: break-word;
+  }
+  .contact__content_form {
+    width: 70% !important;
+  }
+  .contact__content_form form .form-name {
+    flex-direction: column !important;
+  }
+  .contact__content_form form .form-name .form-name1, .contact__content_form form .form-name .form-name2 {
+    margin: 0 !important;
+  }
+  .nav_container {
     max-width: 900px !important;
   }
-  .home .main_container {
-    max-width: 900px !important;
+  .main_container {
+    max-width: 700px !important;
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -187,7 +210,8 @@
 .home .cidrerie .btn_video {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 1rem auto 2.5rem;
+  cursor: pointer;
 }
 .home .cidrerie .btn_video .popup-video {
   border: 3px solid #232855;
@@ -276,6 +300,16 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 100%;
+}
+.home .equipe__cards_one_texte {
+  width: 50%;
+}
+.home .equipe__cards_one_texte p {
+  color: #aaffc7;
+}
+.home .equipe__cards_one_img {
+  width: 50%;
 }
 .home .equipe__cards_one_img img {
   display: block;
@@ -329,15 +363,19 @@
   flex-direction: column;
 }
 .home .contact__content_form form input {
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 6px;
 }
 .home .contact__content_form form input[type=submit] {
-  margin: 1rem auto 0;
+  margin: 2rem auto 0;
   background-color: rgb(255, 255, 255);
   color: #232855;
   font-family: "Righteous";
   text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 3rem !important;
 }
 .home .contact__content_form form label {
   padding: 1rem 0;
