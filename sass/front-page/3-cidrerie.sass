@@ -54,18 +54,29 @@
         margin: 1rem auto 2.5rem 
         cursor: pointer
         .popup-video
-            border: 3px solid $blue
+            position: relative
             border-radius: 10px
+            border: 3px solid $blue
             font-family: 'Paperkind'
             padding: 1.5rem
             text-decoration: none
             text-align: center
+            color: $blue   
+            z-index: 10
+        .popup-video::before
+            border-radius: 6px
+            position: absolute
+            content: ""
+            opacity: 0.75
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            z-index: -1
             transition: 1s background-position ease-in-out
-            color: $blue
-            background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes-scaled.jpg") no-repeat top
+            background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp") no-repeat top
             background-size: cover
-        .popup-video:hover 
-            transform: scale(105%) 
+        .popup-video:hover::before
             background-position: bottom
 
 

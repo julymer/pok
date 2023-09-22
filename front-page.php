@@ -16,6 +16,26 @@
 </header>
 
 <main>
+    <section id="pok" class="section pok">
+
+        <div class="pok_container">
+            <div class="pok__content">
+                <h2 class="section__title"><?php the_field('home__pok_titre') ?></h2>
+                <p><?php the_field('home__pok_description')?></p>
+                    <div>
+                        <?php if(have_rows('home__pok_images')) : ?>
+                        <?php while (the_repeater_field('home__pok_images')) : ?>  
+                        <img src="<?php the_sub_field('img') ?>" alt="">
+                        <?php endwhile; ?>
+                        <?php else : ?>
+                        <?php endif; ?>
+                    </div>
+                   
+            </div>
+            
+        </div>
+
+    </section>
 
     <section id="la-cidrerie" class="section cidrerie">
     
@@ -26,7 +46,7 @@
             <?php while (the_repeater_field('home__story_text')) : ?>
                 
             <div class="cidrerie__content">  
-                <div class="cidrerie__content_img" style="background-image: url('<?php echo wp_get_attachment_image_src(get_sub_field('image'), 'medium_large')[0];?>')">
+                <div class="cidrerie__content_img" style="background-image: url('<?php the_sub_field('image') ?>')">
                     <p class="cidrerie__content_parag"><?php the_sub_field('paragraphe'); ?></p>
                 </div>
                 <div class="cidrerie__content_picto">

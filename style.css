@@ -171,6 +171,46 @@
 .home .header__overlay_container_description {
   font-size: 1.5rem;
 }
+.home .pok {
+  position: relative;
+}
+.home .pok .pok_container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.home .pok .pok_container .pok__content {
+  color: rgb(255, 255, 255);
+  background-color: #232855;
+  border-radius: 10px;
+  padding: 0 2rem 2rem;
+}
+.home .pok .pok_container .pok__content h2 {
+  padding: 2rem 0;
+}
+.home .pok .pok_container .pok__content div {
+  padding: 2rem 0 1rem;
+  max-width: 100%;
+  display: flex;
+}
+.home .pok .pok_container .pok__content div img {
+  max-width: 200px;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.home .pok::before {
+  position: absolute;
+  content: "";
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp") repeat-x;
+  background-size: 55%;
+  z-index: -10;
+}
 .home .cidrerie {
   position: relative;
   background-color: #aaffc7;
@@ -236,19 +276,31 @@
   cursor: pointer;
 }
 .home .cidrerie .btn_video .popup-video {
-  border: 3px solid #232855;
+  position: relative;
   border-radius: 10px;
+  border: 3px solid #232855;
   font-family: "Paperkind";
   padding: 1.5rem;
   text-decoration: none;
   text-align: center;
-  transition: 1s background-position ease-in-out;
   color: #232855;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes-scaled.jpg") no-repeat top;
+  z-index: 10;
+}
+.home .cidrerie .btn_video .popup-video::before {
+  border-radius: 6px;
+  position: absolute;
+  content: "";
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 1s background-position ease-in-out;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp") no-repeat top;
   background-size: cover;
 }
-.home .cidrerie .btn_video .popup-video:hover {
-  transform: scale(105%);
+.home .cidrerie .btn_video .popup-video:hover::before {
   background-position: bottom;
 }
 .home .products {
@@ -454,8 +506,8 @@
 }
 
 .footer {
+  position: relative;
   font-family: "Righteous";
-  background-color: #232855;
   color: rgb(255, 255, 255);
 }
 .footer__content {
@@ -466,6 +518,19 @@
 .footer__content a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+
+.footer::before {
+  position: absolute;
+  content: "";
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp") repeat-x;
+  background-size: 55%;
+  z-index: -10;
 }
 
 /*# sourceMappingURL=style.css.map */
