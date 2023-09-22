@@ -6,7 +6,7 @@
     </video>
     <div class="header__overlay">
         <div class="container header__overlay_container">
-            <h1 class="header__overlay_container_title"><?php the_field('home__header_title') ?></h1>
+            <img src="<?php the_field('home__header_title') ?>" class="header__overlay_container_title">
             <div class="header__overlay_container_description">
                 <?php the_field('home__header_description') ?>
             </div>
@@ -102,7 +102,7 @@
             <h2 class="section__title" ><?php the_field('home__equipe_title') ?></h2>
             <p class="equipe__paragraphe">Une équipe de passionnés qui représente leur racine à travers des produits de qualité, authentiques, respectant l'environnement et les procédés de création et de production ancestraux.</p>
             <div class="equipe__cards slider-container">
-                <div class="swiper">
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                 <?php if(have_rows('home__equipe_cards')) : ?>
                 <?php while (the_repeater_field('home__equipe_cards')) : ?>

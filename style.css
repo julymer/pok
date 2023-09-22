@@ -42,16 +42,37 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .home .main_container {
+    max-width: 600px !important;
+  }
   .home .products__cards {
     display: flex !important;
     flex-direction: column !important;
     align-items: center;
   }
-  .home .products__cards_one_texte {
+  .home .products__cards_one {
+    width: 300px !important;
+  }
+  .home .products__cards_one_one_texte {
     font-size: 2rem;
   }
-  .home .products__cards_one_texte p {
+  .home .products__cards_one_one_texte p {
     overflow-wrap: break-word;
+  }
+  .home .swiper {
+    width: 500px !important;
+    height: 400px !important;
+  }
+  .home .swiper .swiper-slide {
+    flex-direction: column;
+  }
+  .home .swiper .swiper-slide .equipe__cards_one_texte {
+    width: 70% !important;
+    padding: 0 !important;
+    text-align: center;
+  }
+  .home .swiper .swiper-slide .equipe__cards_one_img {
+    padding: 1rem 0 !important;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -88,6 +109,7 @@
   }
   .products__cards_one_texte p {
     overflow-wrap: break-word;
+    font-size: 1rem;
   }
   .contact__content_form {
     width: 70% !important;
@@ -144,7 +166,7 @@
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: bold;
-  padding-top: 15rem;
+  padding-top: 18rem;
 }
 .home .header__overlay_container_description {
   font-size: 1.5rem;
@@ -222,7 +244,7 @@
   text-align: center;
   transition: 1s background-position ease-in-out;
   color: #232855;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/btn-pommes-1-300x152.jpg") no-repeat top;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes-scaled.jpg") no-repeat top;
   background-size: cover;
 }
 .home .cidrerie .btn_video .popup-video:hover {
@@ -258,6 +280,9 @@
 }
 .home .products__cards_one_texte {
   max-width: 100%;
+}
+.home .products__cards_one_texte h3 {
+  text-transform: uppercase;
 }
 .home .products__cards_one:hover {
   scale: 105%;
@@ -296,39 +321,43 @@
 .home .equipe .custom-shape-divider-top-1694441383 .shape-fill {
   fill: #FFFFFF;
 }
-.home .equipe__cards_one {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-}
 .home .equipe__cards_one_texte {
-  width: 50%;
+  width: 60%;
+  padding-left: 2rem;
 }
-.home .equipe__cards_one_texte p {
-  color: #aaffc7;
+.home .equipe__cards_one_texte h3, .home .equipe__cards_one_texte p {
+  margin: 0 2rem;
+}
+.home .equipe__cards_one_texte h3 {
+  text-transform: uppercase;
 }
 .home .equipe__cards_one_img {
-  width: 50%;
-}
-.home .equipe__cards_one_img img {
-  display: block;
-  width: auto;
-  max-height: 200px;
-  margin: 0 auto;
+  width: 40%;
+  padding-right: 2rem;
 }
 .home .equipe__cards .swiper {
-  background-color: rgb(255, 255, 255);
-  color: #232855;
-  width: 60%;
-  padding: 1.5rem;
-  border-radius: 10px;
+  color: #aaffc7;
+  width: 750px;
+  height: 300px;
 }
-.home .equipe__cards .swiper .swiper-pagination .swiper-pagination-bullet-active {
-  background: #232855;
+.home .equipe__cards .swiper .swiper-pagination .swiper-pagination-bullet {
+  background-color: #aaffc7 !important;
 }
-.home .equipe__cards .swiper .swiper-button-prev, .home .equipe__cards .swiper .swiper-button-next {
-  color: #232855;
+.home .equipe__cards .swiper .swiper-button-prev:after, .home .equipe__cards .swiper .swiper-button-next:after {
+  color: #aaffc7 !important;
+}
+.home .equipe__cards .swiper-slide {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .equipe__cards .swiper-slide img {
+  display: block;
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 .home .contact {
   background-color: #aaffc7;
@@ -384,15 +413,6 @@
   padding: 0.5rem;
   border-radius: 6px;
 }
-.home .footer {
-  font-family: "Righteous";
-  background-color: #232855;
-  color: rgb(255, 255, 255);
-}
-
-.admin-bar .nav {
-  top: 32px;
-}
 
 .navigation {
   width: 1200px;
@@ -429,10 +449,23 @@
 .navigation .nav__ul .menu-item:hover {
   scale: 110%;
 }
+.navigation .body .mobmenul-container {
+  top: 0 !important;
+}
 
-.body li a {
+.footer {
   font-family: "Righteous";
-  color: #232855;
+  background-color: #232855;
+  color: rgb(255, 255, 255);
+}
+.footer__content {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__content a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
 }
 
 /*# sourceMappingURL=style.css.map */

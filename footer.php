@@ -1,36 +1,31 @@
 <?php wp_footer(); ?>
 
 <footer class="footer">
-  <div>
-    <p>Mentions légales</p>
-    <p>Recrutement</p>
-    <img src="" alt="logo">
+  <div class="main_container footer__content">
+    <div>
+      <p>Mentions légales</p>
+      <a href="#nous-contacter">Recrutement</a>
+    </div>
+    <img src="<?php the_field('home__footer_image') ?>" alt="logo">
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script>
-    const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
-</script>
+  </script>
 </body>
 </html>

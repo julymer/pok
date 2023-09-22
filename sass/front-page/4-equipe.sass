@@ -26,32 +26,35 @@
         .shape-fill 
             fill: #FFFFFF
     &__cards
-        &_one 
-            display: flex
-            align-items: center
-            justify-content: space-around
-            width: 100%
+        &_one
             &_texte
-                width: 50%
-                p
-                    color: $othergreen
-                
+                width: 60%
+                padding-left: 2rem
+                h3, p 
+                    margin: 0 2rem
+                h3
+                    text-transform: uppercase
             &_img
-                width: 50%
-                img
-                    display: block
-                    width: auto
-                    max-height: 200px
-                    margin: 0 auto
-
+                width: 40%
+                padding-right: 2rem
         .swiper
-            background-color: $white
-            color: $blue
-            width: 60%
-            padding: 1.5rem
-            border-radius: 10px
+            color: $othergreen
+            width: 750px
+            height: 300px
             .swiper-pagination
-                .swiper-pagination-bullet-active
-                    background: $blue
-            .swiper-button-prev, .swiper-button-next
-                color: $blue
+                .swiper-pagination-bullet
+                    background-color: $othergreen !important
+            .swiper-button-prev:after, .swiper-button-next:after
+                color: $othergreen !important
+            
+        .swiper-slide 
+            font-size: 18px
+            display: flex
+            justify-content: center
+            align-items: center
+            img 
+                display: block
+                border-radius: 100px
+                width: 200px
+                height: 200px
+                object-fit: cover
