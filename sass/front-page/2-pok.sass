@@ -10,17 +10,22 @@
         padding: 0 2rem 2rem
         h2
             padding: 2rem 0
-        div
+        &_gallery
             padding: 2rem 0 1rem
             max-width: 100%
             display: grid
             grid-template-columns: repeat(4, 1fr)
+            .popup-image
+                transition: .25s all ease
+            .popup-image:hover
+                transform: scale(105%)
             img
                 max-width: 200px
                 display: block
                 height: auto
                 margin: 0 auto
                 border-radius: 10px
+
 .pok::before
     position: absolute
     content: ""

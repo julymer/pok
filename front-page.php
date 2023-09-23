@@ -22,15 +22,24 @@
             <div class="pok__content">
                 <h2 class="section__title"><?php the_field('home__pok_titre') ?></h2>
                 <p><?php the_field('home__pok_description')?></p>
-                    <div>
+                    <div class="pok__content_gallery">
                         <?php if(have_rows('home__pok_images')) : ?>
                         <?php while (the_repeater_field('home__pok_images')) : ?>  
-                        <img src="<?php the_sub_field('img') ?>" alt="">
+                        <a href="<?php the_sub_field('img') ?>" class="popup-image"> <img src="<?php the_sub_field('img') ?>" alt=""></a>
                         <?php endwhile; ?>
                         <?php else : ?>
                         <?php endif; ?>
                     </div>
-                   
+                    <script>
+                    $(function() {
+                        $('.popup-image').magnificPopup({
+                            type: 'image',
+                            gallery: {
+                                enabled: true
+                            }
+                        });
+                    });
+                   </script>
             </div>
             
         </div>
@@ -163,6 +172,7 @@
                     <p>Mail : <?php the_field('home__contact_mail') ?></p>
                     <p>Téléphone : <?php the_field('home__contact_telephone') ?></p>
                     <p>Adresse : <?php the_field('home__contact_adresse') ?></p>
+                    <a href="<?php the_field('home__contact_carte') ?>" class="popup-image"><img src="<?php the_field('home__contact_carte') ?>" alt="Carte"></a>
                 </div>
                 <div class="contact__content_form">
                     <form action="traitement.php" method="POST">

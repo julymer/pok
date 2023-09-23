@@ -201,13 +201,19 @@
 .home .pok__content h2 {
   padding: 2rem 0;
 }
-.home .pok__content div {
+.home .pok__content_gallery {
   padding: 2rem 0 1rem;
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.home .pok__content div img {
+.home .pok__content_gallery .popup-image {
+  transition: 0.25s all ease;
+}
+.home .pok__content_gallery .popup-image:hover {
+  transform: scale(105%);
+}
+.home .pok__content_gallery img {
   max-width: 200px;
   display: block;
   height: auto;
@@ -457,6 +463,12 @@
 }
 .home .contact__content_coordonnees {
   text-align: center;
+}
+.home .contact__content_coordonnees img {
+  width: 600px;
+  height: auto;
+  border: 5px solid #232855;
+  border-radius: 10px;
 }
 .home .contact__content_form {
   background-color: #232855;
