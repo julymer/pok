@@ -76,6 +76,17 @@
   }
 }
 @media only screen and (max-width: 992px) {
+  .pok .pok_container {
+    max-width: 600px !important;
+  }
+  .pok__content div {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem 0;
+  }
+  .pok::before {
+    background-size: cover !important;
+  }
   h2 {
     text-align: center;
   }
@@ -125,6 +136,9 @@
   }
   .main_container {
     max-width: 700px !important;
+  }
+  .footer::before {
+    background-size: cover !important;
   }
 }
 @media only screen and (max-width: 1300px) {
@@ -178,21 +192,22 @@
   max-width: 900px;
   margin: 0 auto;
 }
-.home .pok .pok_container .pok__content {
-  color: rgb(255, 255, 255);
-  background-color: #232855;
+.home .pok__content {
+  color: #232855;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 2rem 2rem;
 }
-.home .pok .pok_container .pok__content h2 {
+.home .pok__content h2 {
   padding: 2rem 0;
 }
-.home .pok .pok_container .pok__content div {
+.home .pok__content div {
   padding: 2rem 0 1rem;
   max-width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.home .pok .pok_container .pok__content div img {
+.home .pok__content div img {
   max-width: 200px;
   display: block;
   height: auto;
@@ -202,22 +217,22 @@
 .home .pok::before {
   position: absolute;
   content: "";
-  opacity: 0.75;
+  opacity: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp") repeat-x;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-x;
   background-size: 55%;
   z-index: -10;
 }
 .home .cidrerie {
   position: relative;
-  background-color: #aaffc7;
+  background-color: #232855;
 }
 .home .cidrerie .section__title {
   text-align: center;
-  color: #232855;
+  color: #aaffc7;
 }
 .home .cidrerie__content {
   display: flex;
@@ -229,14 +244,17 @@
 .home .cidrerie__content_picto {
   display: flex;
   justify-content: center;
-  height: 300px;
   max-width: 40%;
+  background-color: #aaffc7;
+  padding: 2.5rem;
+  border-radius: 150px;
 }
 .home .cidrerie__content_picto img {
-  transform: scale(70%);
+  height: 150px;
+  width: 150px;
 }
 .home .cidrerie__content_img {
-  max-width: 40%;
+  max-width: 50%;
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -251,6 +269,24 @@
   border-radius: 6px;
   background-color: rgba(42, 42, 42, 0.5);
   color: rgb(255, 255, 255);
+}
+.home .cidrerie .custom-shape-divider-top-1694441383 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.home .cidrerie .custom-shape-divider-top-1694441383 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 55px;
+}
+.home .cidrerie .custom-shape-divider-top-1694441383 .shape-fill {
+  fill: #FFFFFF;
 }
 .home .cidrerie .custom-shape-divider-bottom-1694504049 {
   position: absolute;
@@ -278,7 +314,6 @@
 .home .cidrerie .btn_video .popup-video {
   position: relative;
   border-radius: 10px;
-  border: 3px solid #232855;
   font-family: "Paperkind";
   padding: 1.5rem;
   text-decoration: none;
@@ -290,14 +325,14 @@
   border-radius: 6px;
   position: absolute;
   content: "";
-  opacity: 0.75;
+  opacity: 1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
   transition: 1s background-position ease-in-out;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp") no-repeat top;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") no-repeat top;
   background-size: cover;
 }
 .home .cidrerie .btn_video .popup-video:hover::before {
@@ -506,31 +541,30 @@
 }
 
 .footer {
-  position: relative;
   font-family: "Righteous";
   color: rgb(255, 255, 255);
+  background-color: #232855;
 }
 .footer__content {
   padding: 2rem 0;
   display: flex;
   justify-content: space-between;
 }
-.footer__content a {
+.footer__content div {
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-x;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.footer__content div a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
-
-.footer::before {
-  position: absolute;
-  content: "";
-  opacity: 0.75;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp") repeat-x;
-  background-size: 55%;
-  z-index: -10;
+.footer__content img {
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-x;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

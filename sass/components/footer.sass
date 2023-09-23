@@ -1,25 +1,24 @@
 .footer
-    position: relative
     font-family: 'Righteous'
     color: $white
-
+    background-color: $blue
     &__content
         padding: 2rem 0
         display: flex
         justify-content: space-between
-        a
-            text-decoration: none
-            color: $white
+        div
+            background: url('http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp') repeat-x
+            background-size: cover
+            border-radius: 10px
+            padding: 2rem
+            a
+                text-decoration: none
+                color: $white
+        img
+            background: url('http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp') repeat-x
+            background-size: cover
+            border-radius: 10px
+            padding: 2rem
 
-.footer::before
-    position: absolute
-    content: ""
-    opacity: 0.75
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    background: url('http://localhost/pok/wp-content/uploads/2023/09/fond-pommes.webp') repeat-x
-    background-size: 55%
-    z-index: -10
+
     

@@ -28,6 +28,18 @@
 
 @media only screen and (max-width: 992px)
 
+        .pok
+            .pok_container
+                max-width: 600px !important
+            &__content
+                div
+                    width: 100%
+                    grid-template-columns: repeat(2, 1fr) !important
+                    gap: 2rem 0
+
+        .pok::before
+            background-size: cover !important
+
         h2
             text-align: center
         .cidrerie
@@ -74,6 +86,8 @@
         .main_container 
             max-width: 700px !important
 
+        .footer::before
+            background-size: cover !important
 @media only screen and (max-width: 1300px)
 
         .navigation

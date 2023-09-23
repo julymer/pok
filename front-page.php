@@ -38,7 +38,7 @@
     </section>
 
     <section id="la-cidrerie" class="section cidrerie">
-    
+
         <div class="main_container">
             <h2 class="section__title"><?php the_field('home__story_title') ?></h2>
 
