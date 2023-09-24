@@ -7,14 +7,18 @@
         display: flex
         justify-content: space-between
         div
-            background: url('http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp') repeat-x
-            background-size: cover
-            border-radius: 10px
-            padding: 2rem
+            display: flex
+            flex-direction: column
+            justify-content: space-between
             a
+                margin-top: 1rem
                 text-decoration: none
                 color: $white
-        img
+        &_alcool
+            font-style: italic
+            margin-top: 3rem
+        .logoPok
+            max-width: 150px
             background: url('http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp') repeat-x
             background-size: cover
             border-radius: 10px

@@ -1,5 +1,18 @@
 .home
     position: relative
+    #retourHaut
+        position: fixed
+        bottom: 5rem
+        right: 1rem
+        z-index: 1000
+        p
+            font-family: 'Righteous'
+            cursor: pointer
+            padding: 1rem
+            background: $othergreen
+            border: 3px solid $blue
+            border-radius: 10px
+            color: $blue
     .nav_container
         width: 100%
         max-width: 1200px //1920 ou 1500 ou 1200
@@ -18,7 +31,13 @@
             font-family: 'paperkind'
             padding: 2rem
             font-size: 2rem
+            display: flex
+            align-items: center
+            img
+                max-width: 45px
+                margin-left: 1rem
         h3, p
             font-family: 'Righteous'
             &.no_padding
                 padding: 0
+    

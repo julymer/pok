@@ -6,21 +6,25 @@
     </video>
     <div class="header__overlay">
         <div class="container header__overlay_container">
-            <img src="<?php the_field('home__header_title') ?>" class="header__overlay_container_title">
-            <div class="header__overlay_container_description">
+            <div>
+                <img class="logoPok header__overlay_container_title" src="<?php the_field('home__header_title') ?>" >
                 <?php the_field('home__header_description') ?>
             </div>
+            
         </div>
     </div>
 
 </header>
 
 <main>
+    <div id="retourHaut">
+        <p>Retour en haut</p>
+    </div>
     <section id="pok" class="section pok">
 
         <div class="pok_container">
             <div class="pok__content">
-                <h2 class="section__title"><?php the_field('home__pok_titre') ?></h2>
+                <h2 class="section__title"><?php the_field('home__pok_titre') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
                 <p><?php the_field('home__pok_description')?></p>
                     <div class="pok__content_gallery">
                         <?php if(have_rows('home__pok_images')) : ?>
@@ -30,16 +34,6 @@
                         <?php else : ?>
                         <?php endif; ?>
                     </div>
-                    <script>
-                    $(function() {
-                        $('.popup-image').magnificPopup({
-                            type: 'image',
-                            gallery: {
-                                enabled: true
-                            }
-                        });
-                    });
-                   </script>
             </div>
             
         </div>
@@ -49,8 +43,7 @@
     <section id="la-cidrerie" class="section cidrerie">
 
         <div class="main_container">
-            <h2 class="section__title"><?php the_field('home__story_title') ?></h2>
-
+            <h2 class="section__title"><?php the_field('home__story_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
             <?php if(have_rows('home__story_text')) : ?>
             <?php while (the_repeater_field('home__story_text')) : ?>
                 
@@ -74,18 +67,6 @@
 
             <div class="btn_video">
                 <a class="popup-video" href="<?php the_field('home__story_video') ?>"><?php the_field('home__story_btn_texte') ?></a>
-                        <script>
-                            $(function() {
-                                $('.popup-video').magnificPopup({
-                                    disableOn: 700,
-                                    type: 'iframe',
-                                    mainClass: 'mfp-fade',
-                                    removalDelay: 160,
-                                    preloader: false,
-                                    fixedContentPos: false
-                                });
-                            });
-                        </script>
             </div>
         </div>
         
@@ -94,7 +75,8 @@
     <section id="nos-produits" class="section products">
         
         <div class="main_container">
-            <h2 class="section__title"><?php the_field('home__product_title') ?></h2>
+            <h2 class="section__title"><?php the_field('home__product_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
+            <p class="products__description"><?php the_field('home__product_description') ?></p>
 
             <div class="products__cards">
                 <?php if(have_rows('home__product_cards')) : ?>
@@ -128,7 +110,7 @@
         </div>
         
         <div class="main_container">
-            <h2 class="section__title" ><?php the_field('home__equipe_title') ?></h2>
+            <h2 class="section__title" ><?php the_field('home__equipe_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
             <p class="equipe__paragraphe">Une équipe de passionnés qui représente leur racine à travers des produits de qualité, authentiques, respectant l'environnement et les procédés de création et de production ancestraux.</p>
             <div class="equipe__cards slider-container">
                 <div class="swiper mySwiper">
@@ -164,15 +146,14 @@
     <section id="nous-contacter" class="section contact">
 
         <div class="main_container">
-            <h2 class="section__title"><?php the_field('home__contact_title') ?></h2>
+            <h2 class="section__title"><?php the_field('home__contact_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
             <div class="contact__content">
                 <div class="contact__content_coordonnees">
-                    <p>Envi de nous rencontrer ? De découvrir notre cidrerie ? Ou juste besoin de renseignements ?</p>
-                    <p>Envoyez-nous un message ou appelez-nous</p>
-                    <p>Mail : <?php the_field('home__contact_mail') ?></p>
+                    <?php the_field('home__contact_texte') ?>
+                    <p class="contact__content_coordonnees_mail">Mail : <?php the_field('home__contact_mail') ?></p>
                     <p>Téléphone : <?php the_field('home__contact_telephone') ?></p>
                     <p>Adresse : <?php the_field('home__contact_adresse') ?></p>
-                    <a href="<?php the_field('home__contact_carte') ?>" class="popup-image"><img src="<?php the_field('home__contact_carte') ?>" alt="Carte"></a>
+                    <a href="<?php the_field('home__contact_carte') ?>" class="popup-carte"><img src="<?php the_field('home__contact_carte') ?>" alt="Carte"></a>
                 </div>
                 <div class="contact__content_form">
                     <form action="traitement.php" method="POST">

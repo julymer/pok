@@ -14,6 +14,21 @@
 .home {
   position: relative;
 }
+.home #retourHaut {
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  z-index: 1000;
+}
+.home #retourHaut p {
+  font-family: "Righteous";
+  cursor: pointer;
+  padding: 1rem;
+  background: #aaffc7;
+  border: 3px solid #232855;
+  border-radius: 10px;
+  color: #232855;
+}
 .home .nav_container {
   width: 100%;
   max-width: 1200px;
@@ -33,6 +48,12 @@
   font-family: "paperkind";
   padding: 2rem;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.home .section__title img {
+  max-width: 45px;
+  margin-left: 1rem;
 }
 .home .section h3, .home .section p {
   font-family: "Righteous";
@@ -42,6 +63,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .home .header__overlay_container img, .home .header__overlay_container p {
+    display: none;
+  }
   .home .main_container {
     max-width: 600px !important;
   }
@@ -76,6 +100,9 @@
   }
 }
 @media only screen and (max-width: 992px) {
+  .section__title {
+    justify-content: center !important;
+  }
   .pok .pok_container {
     max-width: 600px !important;
   }
@@ -88,7 +115,7 @@
     background-size: cover !important;
   }
   h2 {
-    text-align: center;
+    text-align: center !important;
   }
   .cidrerie__content {
     flex-direction: column;
@@ -185,6 +212,9 @@
 .home .header__overlay_container_description {
   font-size: 1.5rem;
 }
+.home .header__overlay .logoPok {
+  max-width: 150px;
+}
 .home .pok {
   position: relative;
 }
@@ -211,7 +241,7 @@
   transition: 0.25s all ease;
 }
 .home .pok__content_gallery .popup-image:hover {
-  transform: scale(105%);
+  scale: 105%;
 }
 .home .pok__content_gallery img {
   max-width: 200px;
@@ -237,7 +267,7 @@
   background-color: #232855;
 }
 .home .cidrerie .section__title {
-  text-align: center;
+  justify-content: center !important;
   color: #aaffc7;
 }
 .home .cidrerie__content {
@@ -347,6 +377,9 @@
 .home .products {
   color: #232855;
 }
+.home .products__description {
+  padding: 0 2rem 2rem;
+}
 .home .products__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -378,7 +411,6 @@
   text-transform: uppercase;
 }
 .home .products__cards_one:hover {
-  scale: 105%;
   color: rgb(255, 255, 255);
   background-color: #232855;
 }
@@ -455,6 +487,9 @@
 .home .contact {
   background-color: #aaffc7;
 }
+.home .contact .section__title {
+  justify-content: center !important;
+}
 .home .contact__content {
   font-family: "Righteous";
   display: flex;
@@ -464,7 +499,11 @@
 .home .contact__content_coordonnees {
   text-align: center;
 }
+.home .contact__content_coordonnees_mail {
+  margin-top: 1rem;
+}
 .home .contact__content_coordonnees img {
+  margin-top: 2rem;
   width: 600px;
   height: auto;
   border: 5px solid #232855;
@@ -563,16 +602,21 @@
   justify-content: space-between;
 }
 .footer__content div {
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-x;
-  background-size: cover;
-  border-radius: 10px;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .footer__content div a {
+  margin-top: 1rem;
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
-.footer__content img {
+.footer__content_alcool {
+  font-style: italic;
+  margin-top: 3rem;
+}
+.footer__content .logoPok {
+  max-width: 150px;
   background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-x;
   background-size: cover;
   border-radius: 10px;

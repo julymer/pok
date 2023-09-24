@@ -1,5 +1,7 @@
 .products
     color: $blue
+    &__description
+        padding: 0 2rem 2rem
     &__cards
         display: grid
         grid-template-columns: repeat(4, 1fr)
@@ -25,7 +27,6 @@
                 h3
                     text-transform: uppercase
         &_one:hover
-            scale: 105%
             color: $white
             background-color: $blue
 
