@@ -1,19 +1,18 @@
 <?php get_header(); ?>
 
-<header class="header" style="background-image: url('<?php echo wp_get_attachment_image_src(get_field('home__header_image'), 'large')[0]; ?>">  
+<header class="header" style="background-image: url('<?php the_field('home__header_image') ?>">  
     <video class="header__video" autoplay muted loop> 
         <source src="<?php the_field('home__header_video') ?>" type="video/mp4">
     </video>
     <div class="header__overlay">
         <div class="container header__overlay_container">
-            <div>
-                <img class="logoPok header__overlay_container_title" src="<?php the_field('home__header_title') ?>" >
+            <div class="logoPok">
+                <img class="header__overlay_container_title" src="<?php the_field('home__header_title') ?>" alt="logo POK">
                 <?php the_field('home__header_description') ?>
             </div>
             
         </div>
     </div>
-
 </header>
 
 <main>
@@ -29,7 +28,7 @@
                     <div class="pok__content_gallery">
                         <?php if(have_rows('home__pok_images')) : ?>
                         <?php while (the_repeater_field('home__pok_images')) : ?>  
-                        <a href="<?php the_sub_field('img') ?>" class="popup-image"> <img src="<?php the_sub_field('img') ?>" alt=""></a>
+                        <a href="<?php the_sub_field('img') ?>" class="popup-image"> <img src="<?php the_sub_field('img') ?>" alt="image de présentation de la cidrerie"></a>
                         <?php endwhile; ?>
                         <?php else : ?>
                         <?php endif; ?>
@@ -43,7 +42,7 @@
     <section id="la-cidrerie" class="section cidrerie">
 
         <div class="main_container">
-            <h2 class="section__title"><?php the_field('home__story_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
+            <h2 class="section__title"><?php the_field('home__story_title') ?><img src="<?php the_field('home__story_drapeau') ?>" alt="icône du drapeau breton"></h2>
             <?php if(have_rows('home__story_text')) : ?>
             <?php while (the_repeater_field('home__story_text')) : ?>
                 
@@ -52,7 +51,7 @@
                     <p class="cidrerie__content_parag"><?php the_sub_field('paragraphe'); ?></p>
                 </div>
                 <div class="cidrerie__content_picto">
-                    <img src="<?php the_sub_field('picto'); ?>" alt="">
+                    <img src="<?php the_sub_field('picto'); ?>" alt="pictogramme agriculture">
                 </div>
             </div> 
             <?php endwhile; ?>
@@ -75,7 +74,7 @@
     <section id="nos-produits" class="section products">
         
         <div class="main_container">
-            <h2 class="section__title"><?php the_field('home__product_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
+            <h2 class="section__title"><?php the_field('home__product_title') ?><img src="<?php the_field('home__product_drapeau') ?>" alt="icône du drapeau breton"></h2>
             <p class="products__description"><?php the_field('home__product_description') ?></p>
 
             <div class="products__cards">
@@ -89,7 +88,7 @@
                     </div>
                     
                     <div class="products__cards_one_img">
-                        <img src="<?php the_sub_field('image'); ?>" alt="">
+                        <img src="<?php the_sub_field('image'); ?>" alt="image bouteille de cidre">
                     </div>
                 </div>
 
@@ -110,7 +109,7 @@
         </div>
         
         <div class="main_container">
-            <h2 class="section__title" ><?php the_field('home__equipe_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
+            <h2 class="section__title" ><?php the_field('home__equipe_title') ?><img src="<?php the_field('home__equipe_drapeau') ?>" alt="icône du drapeau breton"></h2>
             <p class="equipe__paragraphe">Une équipe de passionnés qui représente leur racine à travers des produits de qualité, authentiques, respectant l'environnement et les procédés de création et de production ancestraux.</p>
             <div class="equipe__cards slider-container">
                 <div class="swiper mySwiper">
@@ -125,7 +124,7 @@
                             </div>
                             
                             <div class="equipe__cards_one_img">
-                                <img id="img-carousel" src="<?php the_sub_field('image'); ?>" alt="">
+                                <img id="img-carousel" src="<?php the_sub_field('image'); ?>" alt="image membre de l'équipe POK">
                             </div>
                         </div>
 
@@ -146,7 +145,7 @@
     <section id="nous-contacter" class="section contact">
 
         <div class="main_container">
-            <h2 class="section__title"><?php the_field('home__contact_title') ?><img src="<?php the_field('home__pok_drapeau') ?>"></h2>
+            <h2 class="section__title"><?php the_field('home__contact_title') ?><img src="<?php the_field('home__contact_drapeau') ?>" alt="icône du drapeau breton"></h2>
             <div class="contact__content">
                 <div class="contact__content_coordonnees">
                     <?php the_field('home__contact_texte') ?>

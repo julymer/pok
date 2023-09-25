@@ -11,16 +11,16 @@
   font-family: "varelaround";
   src: url("assets/fonts/varelaround/varelaround.woff2") format("woff2");
 }
-.home {
+body {
   position: relative;
 }
-.home #retourHaut {
+body #retourHaut {
   position: fixed;
   bottom: 5rem;
   right: 1rem;
   z-index: 1000;
 }
-.home #retourHaut p {
+body #retourHaut p {
   font-family: "Righteous";
   cursor: pointer;
   padding: 1rem;
@@ -29,73 +29,73 @@
   border-radius: 10px;
   color: #232855;
 }
-.home .nav_container {
+body .nav_container {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1rem;
 }
-.home .main_container {
+body .main_container {
   width: 100%;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1rem;
 }
-.home .section {
+body .section {
   padding: 2.75rem 0;
 }
-.home .section__title {
+body .section__title {
   font-family: "paperkind";
   padding: 2rem;
   font-size: 2rem;
   display: flex;
   align-items: center;
 }
-.home .section__title img {
+body .section__title img {
   max-width: 45px;
   margin-left: 1rem;
 }
-.home .section h3, .home .section p {
+body .section h3, body .section p {
   font-family: "Righteous";
 }
-.home .section h3.no_padding, .home .section p.no_padding {
+body .section h3.no_padding, body .section p.no_padding {
   padding: 0;
 }
 
 @media only screen and (max-width: 768px) {
-  .home .header__overlay_container img, .home .header__overlay_container p {
+  body .header__overlay_container img, body .header__overlay_container p {
     display: none;
   }
-  .home .main_container {
+  body .main_container {
     max-width: 600px !important;
   }
-  .home .products__cards {
+  body .products__cards {
     display: flex !important;
     flex-direction: column !important;
     align-items: center;
   }
-  .home .products__cards_one {
+  body .products__cards_one {
     width: 300px !important;
   }
-  .home .products__cards_one_one_texte {
+  body .products__cards_one_one_texte {
     font-size: 2rem;
   }
-  .home .products__cards_one_one_texte p {
+  body .products__cards_one_one_texte p {
     overflow-wrap: break-word;
   }
-  .home .swiper {
+  body .swiper {
     width: 500px !important;
     height: 400px !important;
   }
-  .home .swiper .swiper-slide {
+  body .swiper .swiper-slide {
     flex-direction: column;
   }
-  .home .swiper .swiper-slide .equipe__cards_one_texte {
+  body .swiper .swiper-slide .equipe__cards_one_texte {
     width: 70% !important;
     padding: 0 !important;
     text-align: center;
   }
-  .home .swiper .swiper-slide .equipe__cards_one_img {
+  body .swiper .swiper-slide .equipe__cards_one_img {
     padding: 1rem 0 !important;
   }
 }
@@ -167,6 +167,9 @@
   .footer::before {
     background-size: cover !important;
   }
+  .confid {
+    padding: 2rem !important;
+  }
 }
 @media only screen and (max-width: 1300px) {
   .navigation {
@@ -212,7 +215,7 @@
 .home .header__overlay_container_description {
   font-size: 1.5rem;
 }
-.home .header__overlay .logoPok {
+.home .header__overlay .logoPok img {
   max-width: 150px;
 }
 .home .pok {
@@ -294,7 +297,7 @@
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 .home .cidrerie__content_img p {
   display: flex;
@@ -302,9 +305,10 @@
   height: 100%;
   padding: 60px 20px;
   text-align: justify;
-  border-radius: 6px;
+  border-radius: 10px;
   background-color: rgba(42, 42, 42, 0.5);
   color: rgb(255, 255, 255);
+  font-size: 1.25rem;
 }
 .home .cidrerie .custom-shape-divider-top-1694441383 {
   position: absolute;
@@ -621,6 +625,18 @@
   background-size: cover;
   border-radius: 10px;
   padding: 2rem;
+}
+
+.confid {
+  width: 100%;
+  padding: 6rem 5rem 2rem;
+  font-family: "Righteous";
+}
+.confid__title {
+  font-size: 2rem;
+}
+.confid h2 {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/custom.js">
 
     <?php wp_head(); ?>
 
@@ -33,5 +34,6 @@
 
     ?>
   </div>
+  
 </div>
 
