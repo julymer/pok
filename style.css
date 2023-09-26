@@ -62,40 +62,66 @@ body .section h3.no_padding, body .section p.no_padding {
   padding: 0;
 }
 
+@media only screen and (max-width: 576px) {
+  body .cidrerie__content_img p {
+    font-size: 1rem !important;
+  }
+  body .swiper {
+    width: 350px !important;
+    height: 400px !important;
+  }
+  body .swiper .swiper-slide .equipe__cards_one_texte {
+    width: 90% !important;
+  }
+  body .swiper .swiper-slide .equipe__cards_one_img img {
+    height: 150px !important;
+  }
+}
 @media only screen and (max-width: 768px) {
-  body .header__overlay_container img, body .header__overlay_container p {
+  .header__overlay_container img, .header__overlay_container p {
     display: none;
   }
-  body .main_container {
+  .main_container {
     max-width: 600px !important;
   }
-  body .products__cards {
+  .pok .pok_container {
+    max-width: 100%;
+  }
+  .pok__content div {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  .pok__content_gallery img {
+    max-width: 300px !important;
+  }
+  .products__cards {
     display: flex !important;
     flex-direction: column !important;
     align-items: center;
   }
-  body .products__cards_one {
+  .products__cards_one {
     width: 300px !important;
   }
-  body .products__cards_one_one_texte {
+  .products__cards_one_one_texte {
     font-size: 2rem;
   }
-  body .products__cards_one_one_texte p {
+  .products__cards_one_one_texte p {
     overflow-wrap: break-word;
   }
-  body .swiper {
-    width: 500px !important;
-    height: 400px !important;
+  .swiper {
+    width: 450px !important;
+    height: 500px !important;
   }
-  body .swiper .swiper-slide {
+  .swiper .swiper-slide {
     flex-direction: column;
   }
-  body .swiper .swiper-slide .equipe__cards_one_texte {
-    width: 70% !important;
+  .swiper .swiper-slide .equipe__cards_one_texte {
+    width: 80% !important;
     padding: 0 !important;
     text-align: center;
   }
-  body .swiper .swiper-slide .equipe__cards_one_img {
+  .swiper .swiper-slide .equipe__cards_one_img {
     padding: 1rem 0 !important;
   }
 }
@@ -112,7 +138,8 @@ body .section h3.no_padding, body .section p.no_padding {
     gap: 2rem 0;
   }
   .pok::before {
-    background-size: cover !important;
+    background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-y !important;
+    background-size: contain !important;
   }
   h2 {
     text-align: center !important;
@@ -210,7 +237,7 @@ body .section h3.no_padding, body .section p.no_padding {
   text-transform: uppercase;
   font-size: 3rem;
   font-weight: bold;
-  padding-top: 18rem;
+  padding-top: 15rem;
 }
 .home .header__overlay_container_description {
   font-size: 1.5rem;
@@ -241,10 +268,11 @@ body .section h3.no_padding, body .section p.no_padding {
   grid-template-columns: repeat(4, 1fr);
 }
 .home .pok__content_gallery .popup-image {
-  transition: 0.25s all ease;
+  transition: 0.2s all;
+  display: block;
 }
 .home .pok__content_gallery .popup-image:hover {
-  scale: 105%;
+  scale: 102%;
 }
 .home .pok__content_gallery img {
   max-width: 200px;
@@ -261,7 +289,7 @@ body .section h3.no_padding, body .section p.no_padding {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-x;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert-2.webp") repeat;
   background-size: 55%;
   z-index: -10;
 }
@@ -355,6 +383,7 @@ body .section h3.no_padding, body .section p.no_padding {
   position: relative;
   border-radius: 10px;
   font-family: "Paperkind";
+  font-weight: bold;
   padding: 1.5rem;
   text-decoration: none;
   text-align: center;
@@ -372,7 +401,7 @@ body .section h3.no_padding, body .section p.no_padding {
   bottom: 0;
   z-index: -1;
   transition: 1s background-position ease-in-out;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") no-repeat top;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert-2.webp") no-repeat top;
   background-size: cover;
 }
 .home .cidrerie .btn_video .popup-video:hover::before {
@@ -515,45 +544,46 @@ body .section h3.no_padding, body .section p.no_padding {
 }
 .home .contact__content_form {
   background-color: #232855;
-  color: rgb(255, 255, 255);
   border-radius: 10px;
   width: 60%;
   margin: 2rem auto 0;
   padding: 2rem;
+  /*form
+  *  .form-name
+  *      display: flex
+  *      .form-name1, .form-name2
+  *          display: flex
+  *          flex-direction: column
+  *          margin-right: 1rem
+  *  /*.form-mail, .form-msg
+  *      display: flex
+  *      flex-direction: column
+  *  /*input
+  *      padding: 1rem
+  *      border-radius: 6px
+  *  /*input[type=submit]
+  *      margin: 2rem auto 0
+  *      background-color: $white
+  *      color: $blue
+  *      font-family: 'Righteous'
+  *      text-transform: uppercase
+  *      cursor: pointer
+  *      display: flex
+  *      justify-content: center
+  *      padding: 1rem 3rem !important
+  *  /*label
+  *      padding: 1rem 0
+  *  /*#message
+  *      padding: 0.5rem
+  *      border-radius: 6px*/
 }
-.home .contact__content_form form .form-name {
-  display: flex;
+.home .contact__content_form legend, .home .contact__content_form label {
+  color: rgb(255, 255, 255) !important;
+  font-weight: lighter;
 }
-.home .contact__content_form form .form-name .form-name1, .home .contact__content_form form .form-name .form-name2 {
-  display: flex;
-  flex-direction: column;
-  margin-right: 1rem;
-}
-.home .contact__content_form form .form-mail, .home .contact__content_form form .form-msg {
-  display: flex;
-  flex-direction: column;
-}
-.home .contact__content_form form input {
-  padding: 1rem;
-  border-radius: 6px;
-}
-.home .contact__content_form form input[type=submit] {
-  margin: 2rem auto 0;
-  background-color: rgb(255, 255, 255);
-  color: #232855;
-  font-family: "Righteous";
-  text-transform: uppercase;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  padding: 1rem 3rem !important;
-}
-.home .contact__content_form form label {
-  padding: 1rem 0;
-}
-.home .contact__content_form form #message {
-  padding: 0.5rem;
-  border-radius: 6px;
+.home .contact__content_form button[type=submit] {
+  background-color: rgb(255, 255, 255) !important;
+  color: #232855 !important;
 }
 
 .navigation {
@@ -621,7 +651,8 @@ body .section h3.no_padding, body .section p.no_padding {
 }
 .footer__content .logoPok {
   max-width: 150px;
-  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp") repeat-x;
+  height: 150px;
+  background: url("http://localhost/pok/wp-content/uploads/2023/09/fond-vert-2.webp") repeat-x;
   background-size: cover;
   border-radius: 10px;
   padding: 2rem;

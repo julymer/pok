@@ -155,30 +155,7 @@
                     <a href="<?php the_field('home__contact_carte') ?>" class="popup-carte"><img src="<?php the_field('home__contact_carte') ?>" alt="Carte"></a>
                 </div>
                 <div class="contact__content_form">
-                    <form action="traitement.php" method="POST">
-                        <div class="form-name">
-                            <div class="form-name1">
-                                <label for="nom">Nom :</label>
-                                <input type="text" id="nom" name="nom" placeholder="Dicaprio" required>
-                            </div>
-                            
-                            <div class="form-name2">
-                                <label for="prenom">Prénom :</label>
-                                <input type="text" id="prenom" name="prenom" placeholder="Leonardo" required> 
-                            </div>  
-                        </div>
-                        
-                        <div class="form-mail">
-                            <label for="email" required>E-mail :</label>
-                            <input type="email" id="email" name="email" placeholder="Dicaprio@gmail.com" required>
-                        </div>
-                        
-                        <div class="form-msg">
-                            <label for="message">Message :</label>
-                            <textarea id="message" name="message" rows="6" cols="50" placeholder="Bonjour, je m'appelle Leonardo et j'adorerais faire une dégustation de votre légendaire cidre......" required></textarea>
-                        </div>
-                        <input type="submit" value="Envoyer">
-                    </form>
+                    <?php echo do_shortcode('[wpforms id="273" title="false"]'); ?>
                 </div>
             </div>
         </div>

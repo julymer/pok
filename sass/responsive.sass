@@ -1,6 +1,20 @@
+@media only screen and (max-width: 576px)
+    body
+        .cidrerie__content_img 
+            p
+                font-size: 1rem !important
+        .swiper
+            width: 350px !important
+            height: 400px !important
+            .swiper-slide
+                .equipe__cards_one_texte
+                    width: 90% !important
+                .equipe__cards_one_img
+                    img
+                        height: 150px !important
+
 @media only screen and (max-width: 768px)
     
-    body
         .header
             &__overlay
                 &_container
@@ -9,6 +23,18 @@
                         
         .main_container 
             max-width: 600px !important
+
+        .pok
+            .pok_container
+                max-width: 100%
+            &__content
+                div
+                    display: flex !important
+                    flex-direction: column !important
+                    justify-content: space-between !important
+                &_gallery
+                    img
+                        max-width: 300px !important
         .products
                 &__cards
                     display: flex !important
@@ -21,12 +47,12 @@
                             p
                                 overflow-wrap: break-word
         .swiper
-            width: 500px !important
-            height: 400px !important
+            width: 450px !important
+            height: 500px !important
             .swiper-slide
                 flex-direction: column
                 .equipe__cards_one_texte
-                    width: 70% !important
+                    width: 80% !important
                     padding: 0 !important
                     text-align: center
                 .equipe__cards_one_img
@@ -47,7 +73,8 @@
                     gap: 2rem 0
 
         .pok::before
-            background-size: cover !important
+            background: url('http://localhost/pok/wp-content/uploads/2023/09/fond-vert.webp') repeat-y !important
+            background-size: contain !important
 
         h2
             text-align: center !important

@@ -19,25 +19,30 @@
                 border-radius: $radius
         &_form
             background-color: $blue
-            color: $white
             border-radius: $radius
             width: 60%
             margin: 2rem auto 0
             padding: 2rem
-            form
+            legend, label 
+                color: $white !important
+                font-weight: lighter
+            button[type=submit]
+                background-color: $white !important
+                color: $blue !important
+            /*form
                 .form-name
                     display: flex
                     .form-name1, .form-name2
                         display: flex
                         flex-direction: column
                         margin-right: 1rem
-                .form-mail, .form-msg
+                /*.form-mail, .form-msg
                     display: flex
                     flex-direction: column
-                input
+                /*input
                     padding: 1rem
                     border-radius: 6px
-                input[type=submit]
+                /*input[type=submit]
                     margin: 2rem auto 0
                     background-color: $white
                     color: $blue
@@ -47,10 +52,10 @@
                     display: flex
                     justify-content: center
                     padding: 1rem 3rem !important
-                label
+                /*label
                     padding: 1rem 0
-                #message
+                /*#message
                     padding: 0.5rem
-                    border-radius: 6px
+                    border-radius: 6px*/
 
     
